@@ -29,5 +29,19 @@
             //Assert
             $this->assertEquals(['quarters' => 0, 'dimes' => 0, 'nickels' => 1, 'pennies' => 2], $result);
         }
+
+        function test_makeCoins_dimes()
+        {
+
+            //Arrange
+            $test_coins = new Coins;
+            $input = 17;
+
+            //Act
+            $result = $test_coins->makeCoins($input);
+
+            //Assert
+            $this->assertEquals(['quarters' => 0, 'dimes' => 1, 'nickels' => 1, 'pennies' => 2], $result);
+        }
     }
 ?>
