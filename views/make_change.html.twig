@@ -1,0 +1,19 @@
+<html>
+    <hegad>
+        <link rel='stylesheet' type='text/css' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css'>
+        <title>Change Made: You Did It!</title>
+    </head>
+    <body>
+        <div class='container'>
+            <div class='jumbotron'>
+                <h1>You're an American hero! Here's your change!</h1>
+            </div>
+            <h2>These are the coins you need:</h2>
+            <ul>
+                {% for key in coins_arr|keys %}
+                    <li>{{ key }}: {{ coins_arr[key] }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </body>
+</html>

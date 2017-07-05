@@ -10,4 +10,12 @@
 
         return $app['twig']->render('coins.html.twig');
     });
+
+    $app->get('/make_change', function() use ($app) {
+        $coins = new Coins;
+        $coins_arr = $coins->makeCoins($_GET['cents']);
+
+        return $app['twig']->render('make_change.html.twig', array('coins_arr' => $coins_arr));
+    });
+    return $app
 ?>
