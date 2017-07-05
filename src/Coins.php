@@ -2,9 +2,9 @@
 
     class Coins
     {
-        function __construct($input)
+        function makeCoins($input)
         {
-            
+            return $input . ' pennies';
         }
     }
 
